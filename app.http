@@ -1,0 +1,49 @@
+GET http://localhost:9000/ HTTP/1.1
+
+###
+GET http://localhost:9000/users?search=hari
+
+
+###
+GET http://localhost:9000/specializations
+
+###
+GET http://localhost:9000/user-details/1
+
+###
+POST  http://localhost:9000/add-user
+Content-Type: application/json
+
+
+{   "userData":{
+    "specialization_name":[2,4,6,8], 
+    "associate_name": "ram",
+    "phone": 2334445555,
+    "address":"vtz" 
+}
+
+}
+
+
+###
+PUT http://localhost:9000/update-user/1
+Content-Type: application/json
+
+
+{   "userData":{
+    "specialization_name":[2,4,6], 
+    "associate_name": "yedida",
+    "phone": 9908934531,
+    "address":"vtz"
+}
+
+}
+
+
+###
+DELETE  http://localhost:9000/delete-user
+Content-Type: application/json
+
+{
+    "deleteIds":[2]
+}
